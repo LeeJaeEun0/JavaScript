@@ -20,6 +20,7 @@
         </ol>
     <div id="article">
         <h2>JavaScript</h2>
+        
         <input type="button" value="night" onclick="
             document.querySelector('body').style.backgroundColor ='black';
             document.querySelector('body').style.color ='white';
@@ -28,7 +29,21 @@
         <input type="button" value="day" onclick="
         document.querySelector('body').style.backgroundColor ='white';
         document.querySelector('body').style.color ='black';
-    ">
+        ">
+        
+        <input type="button" value="black" onclick="
+            if(document.querySelector('body').dataset === 'day'){
+                document.querySelector('body').style.backgroundColor ='black';
+                document.querySelector('body').style.color ='white';
+                document.querySelector('body').dataset.mode = 'night';
+            }else{
+                document.querySelector('body').style.backgroundColor ='white';
+                document.querySelector('body').style.color ='black';
+                document.querySelector('body').dataset.mode = 'day';
+                this.value = 'night';
+            }
+        ">
+
         <p>JavaScript
             often abbreviated as JS,
             is a programming language that is one of the core technologies of the World Wide Web,
