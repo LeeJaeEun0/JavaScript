@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 5px solid gray;
+            display: grid; /*2개의 태그가 같은 줄에 출력*/
+            /*grid-template-columns: 150px 1fr; 첫번째는 150px 크기가 고정, 2번째는 1fr
+            grid-template-columns: 1fr 1fr; 전체를 2fr크기로 보고 반씩 나눠가짐
+            grid-template-columns: 2fr 1fr; 전체를 3fr크기로 보고 첫번째는 2fr, 두번째는 1fr을 나눠 갖는다
+            =>fr은 창의 크기가 바뀔때마다 정해진 숫자만큼 나눠서 가짐(몇 등분으로 나눈다고 하면 이해하기 쉬움)
+            */
+            grid-template-columns: 150px 1fr;
+        }  
+    </style>
+</head>
+<body>
+    <div id="grid"><!-- 2개의 태그를 감싸기-->
+        <div>NAVIGATION</div>
+        <div>ARITCLE</div>
+    </div>
+</body>
+</html>
