@@ -7,7 +7,6 @@
     <title>WEB - JavaScript</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    
 </head>
 
 <body>
@@ -21,7 +20,16 @@
         </ol>
     <div id="article">
         <h2>JavaScript</h2>
-        <p><a href="https://www.w3schools.com/js/default.asp">JavaScript</a>
+        <input type="button" value="night" onclick="
+            document.querySelector('body').style.backgroundColor ='black';
+            document.querySelector('body').style.color ='white';
+            //querySelector('태그명이나 id 등을 넣어서 사용')
+        ">
+        <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor ='white';
+        document.querySelector('body').style.color ='black';
+    ">
+        <p>JavaScript
             often abbreviated as JS,
             is a programming language that is one of the core technologies of the World Wide Web,
             alongside HTML and CSS. As of 2022, 98% of websites use JavaScript
