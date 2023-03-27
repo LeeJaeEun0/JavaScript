@@ -7,6 +7,41 @@
     <title>WEB - JavaScript</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script>
+        function nightDayHandler(self){
+            // 리팩토링 - 중복되는 코드를 제거
+            // 모드가 day이면 nigth
+            // this는 자기자신을 의미
+            var target = document.querySelector('body');
+            if(self.value === 'night'){
+                target.style.backgroundColor ='black';
+                target.style.color ='white';
+                
+                // value를 day로 바꾸지 않으면 계속 night 상태
+                self.value = 'day';
+
+                var alist = document.querySelectorAll('a'); //모든 a태그 찾기
+                var i = 0;
+                while(i < alist.length){
+                    alist[i].style.color = 'powderblue';
+                    i = i+1;
+                }// end of while
+                
+            }else{ // 모드가 night이면 day로 변경
+                target.style.color ='black';
+                target.style.backgroundColor ='white';
+                self.value = 'night';
+
+                var alist = document.querySelectorAll('a'); //모든 a태그 찾기
+                var i = 0;
+                while(i < alist.length){
+                    alist[i].style.color = 'blue';
+                    i = i+1;
+                }// end of while
+
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -45,22 +80,7 @@
             }
         "> -->
 
-            <input  type="button" value="night" onclick="
-            // 리팩토링 - 중복되는 코드를 제거
-            // 모드가 day이면 nigth
-            // this는 자기자신을 의미
-            var target = document.querySelector('body');
-            if(this.value === 'night'){
-                target.style.backgroundColor ='black';
-                target.style.color ='white';
-                // value를 day로 바꾸지 않으면 계속 night 상태
-                this.value = 'day';
-            }else{ // 모드가 night이면 day로 변경
-                target.style.color ='black';
-                target.style.backgroundColor ='white';
-                this.value = 'night';
-            }
-        ">
+            <input  type="button" value="night" onclick="nightDayHandler(this);">
             <p>JavaScript
                 often abbreviated as JS,
                 is a programming language that is one of the core technologies of the World Wide Web,

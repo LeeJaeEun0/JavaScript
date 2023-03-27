@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loop & Array</h1>
+    <h2>Co Workers</h2>
+    <script>
+        var coworkers = ['egoing', 'leezche', 'duru','taeho'];
+    </script>
+    <ul>
+        <script>
+            var  i =0;
+            while(i < coworkers.length){
+                document.write('<li>'+coworkers[i]+'</li>');
+                //document.write('<li><a href="https://주소'+coworkers[i]+'">'+coworkers[i]+'</a></li>')
+                // 주소와 이름이 결합된 링크가 나타남
+                i = i +1;
+            }
+        </script>
+    </ul>
+</body>
+</html>
