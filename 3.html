@@ -16,20 +16,25 @@
                     i = i+1;
                 }// end of while
         }
-        function BodysetColor(color){ // 문자의 색상을 변경
-            document.querySelector('body').style.color = color;
-        }
-        function BodysetgroundColor(color){
+
+        var Body = {
+            setColor:function (color){
+            document.querySelector('body').color= color;
+        },
+        setgroundColor:function (color){
             document.querySelector('body').style.backgroundColor= color;
         }
+        }
+        
+        
         function nightDayHandler(self){
             // 리팩토링 - 중복되는 코드를 제거
             // 모드가 day이면 nigth
             // this는 자기자신을 의미
             var target = document.querySelector('body');
             if(self.value === 'night'){
-                BodysetgroundColor('black');
-                BodysetColor('white');
+                Body.setgroundColor('black');
+                Body.setColor('white');
                 
                 // value를 day로 바꾸지 않으면 계속 night 상태
                 self.value = 'day';
@@ -37,13 +42,39 @@
                 LinksetColor('powderblue');
                 
             }else{ // 모드가 night이면 day로 변경
-                BodysetgroundColor('white');
-                BodysetColor('black');
+                Body.setgroundColor('white');
+                Body.setColor('black');
                 self.value = 'night';
 
                 LinksetColor('blue');
             }
         }
+        
+        // function BodysetgroundColor(color){
+        //     document.querySelector('body').style.backgroundColor= color;
+        // }
+        // function nightDayHandler(self){
+        //     // 리팩토링 - 중복되는 코드를 제거
+        //     // 모드가 day이면 nigth
+        //     // this는 자기자신을 의미
+        //     var target = document.querySelector('body');
+        //     if(self.value === 'night'){
+        //         BodysetgroundColor('black');
+        //         BodysetColor('white');
+                
+        //         // value를 day로 바꾸지 않으면 계속 night 상태
+        //         self.value = 'day';
+
+        //         LinksetColor('powderblue');
+                
+        //     }else{ // 모드가 night이면 day로 변경
+        //         BodysetgroundColor('white');
+        //         BodysetColor('black');
+        //         self.value = 'night';
+
+        //         LinksetColor('blue');
+        //     }
+        // }
     </script>
 </head>
 

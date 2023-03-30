@@ -19,6 +19,21 @@
         document.write("bookeeper : "+coworkers.bookeeper+"<br>");
         coworkers['data scientlist'] = "taeho"; // 객체에 값을 추가하는 방법2, 띄어쓰기를 사용하기 위해서 배열 형식으로 넣음
         document.write("data scientlist : "+coworkers['data scientlist']+"<br>");
-    </script>``
+    </script>
+    <h2>Iterate</h2>
+    <script>
+        for(var key in coworkers){
+            document.write(key+ ' : '+ coworkers[key]+ "<br>");
+        }
+    </script>
+    <h2>Property & Method</h2>
+    <script>
+        coworkers.showAll = function(){
+            for(var key in this){ // this를 사용하면 객체의 이름이 바뀌어도 괜찮음
+            document.write(key+ ' : '+ this[key]+ "<br>");
+            }
+        }
+        coworkers.showAll();
+    </script>
 </body>
 </html>
